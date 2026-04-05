@@ -508,3 +508,15 @@ This writes `benchmark_results.txt` with:
 - API response times before/after indexing
 - SQL query times before/after indexing
 - EXPLAIN QUERY PLAN snapshots before/after indexing
+
+Contributions:
+
+Keerthan Varma (23110068) - Module B 
+
+Dns Manikanta (23110104) - Module B
+
+Kodali Dinesh Siddhartha (23110168)- Module B
+
+Praveen Kumar (23110257) - Module A
+
+Vadithe Venkat Akhilesh Naik (23110348) - Module A
