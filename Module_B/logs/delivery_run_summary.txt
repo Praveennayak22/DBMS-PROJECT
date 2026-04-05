@@ -1,0 +1,42 @@
+Module B End-to-End Delivery Run
+Timestamp: 2026-03-21T15:49:42.926460Z
+Admin login: 200
+Admin isAuth: 200 role=CDS Manager
+Admin create company: 200 id=16
+Admin list companies: 200 count=16
+Admin update company: 200
+Admin create job: 200 id=16
+Admin list jobs(min_cpi=8.0): 200 count=16
+Admin update job: 200
+Student login: 200
+Student isAuth: 200 role=Student
+Student view own portfolio: 200
+Student update own portfolio: 200
+Student create company (should be forbidden): 403 detail=Admin role required
+Student create application: 200 id=36
+Student update own application: 200
+Admin delete application: 200
+Admin delete job: 200
+Admin delete company: 200
+Audit logs fetch: 200 total=11 success=10 forbidden=1
+
+Local audit.log tail (last 20 lines):
+2026-03-18T08:50:41.296964+00:00 actor=1 action=INSERT table=companies record=3 path=/companies status=success
+2026-03-21T09:09:14.850833+00:00 actor=1 action=INSERT table=companies record=3 path=/companies status=success
+2026-03-21T13:04:02.719621+00:00 actor=1000 action=INSERT table=companies record=16 path=/companies status=success
+2026-03-21T13:04:02.743051+00:00 actor=1000 action=INSERT table=job_postings record=16 path=/jobs status=success
+2026-03-21T13:04:02.779095+00:00 actor=1 action=INSERT table=applications record=36 path=/applications status=success
+2026-03-21T13:04:02.803069+00:00 actor=1 action=UPDATE table=applications record=36 path=/applications/36 status=success
+2026-03-21T13:04:02.819182+00:00 actor=1 action=DENY table=companies record=None path=/companies status=forbidden
+2026-03-21T13:04:02.838399+00:00 actor=1000 action=DELETE table=applications record=36 path=/applications/36 status=success
+2026-03-21T15:49:43.377663+00:00 actor=1000 action=INSERT table=companies record=16 path=/companies status=success
+2026-03-21T15:49:43.418440+00:00 actor=1000 action=UPDATE table=companies record=16 path=/companies/16 status=success
+2026-03-21T15:49:43.448672+00:00 actor=1000 action=INSERT table=job_postings record=16 path=/jobs status=success
+2026-03-21T15:49:43.497137+00:00 actor=1000 action=UPDATE table=job_postings record=16 path=/jobs/16 status=success
+2026-03-21T15:49:43.565347+00:00 actor=1 action=UPDATE table=students record=230001 path=/portfolio/230001 status=success
+2026-03-21T15:49:43.591021+00:00 actor=1 action=DENY table=companies record=None path=/companies status=forbidden
+2026-03-21T15:49:43.631842+00:00 actor=1 action=INSERT table=applications record=36 path=/applications status=success
+2026-03-21T15:49:43.666801+00:00 actor=1 action=UPDATE table=applications record=36 path=/applications/36 status=success
+2026-03-21T15:49:43.703726+00:00 actor=1000 action=DELETE table=applications record=36 path=/applications/36 status=success
+2026-03-21T15:49:43.741392+00:00 actor=1000 action=DELETE table=job_postings record=16 path=/jobs/16 status=success
+2026-03-21T15:49:43.773252+00:00 actor=1000 action=DELETE table=companies record=16 path=/companies/16 status=success

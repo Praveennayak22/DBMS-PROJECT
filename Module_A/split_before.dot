@@ -1,0 +1,5 @@
+// B+ Tree
+digraph {
+	rankdir=TB
+	2415373474640 [label="5|10|20" fillcolor=lightblue shape=box style=filled]
+}

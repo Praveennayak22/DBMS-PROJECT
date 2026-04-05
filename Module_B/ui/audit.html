@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audit Logs | Module B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="audit">
+  <div class="backdrop"></div>
+  <header class="header">
+    <div>
+      <h1>Audit Logs</h1>
+      <p>Inspect activity trails for write operations.</p>
+    </div>
+    <div class="session-box">
+      <span id="sessionState">Not logged in</span>
+      <button id="logoutBtn" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="/">Home</a>
+    <a href="/ui/portfolio" data-portfolio-access="1">Portfolio</a>
+    <a href="/ui/members" data-members-access="1">Members</a>
+    <a href="/ui/groups" data-groups-view="1">Groups</a>
+    <a href="/ui/companies-jobs" data-companies-view="1">Companies and Jobs</a>
+    <a href="/ui/applications">Applications</a>
+    <a href="/ui/audit" class="active" data-audit-access="1">Audit Logs</a>
+  </nav>
+
+  <main class="page">
+    <section class="card">
+      <h2>Logs</h2>
+      <div class="row">
+        <input id="auditLimit" type="number" value="50" placeholder="limit" />
+        <button id="refreshAuditBtn" class="ghost">Refresh Audit Logs</button>
+      </div>
+      <div id="auditList" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/static/common.js?v=20260323"></script>
+  <script src="/static/audit.js?v=20260323"></script>
+</body>
+</html>

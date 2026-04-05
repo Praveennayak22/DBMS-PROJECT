@@ -1,0 +1,85 @@
+2026-04-05 10:33:38,457 [__main__] INFO: Starting async load test: 100 users, scenario: job_application_burst
+2026-04-05 10:33:38,780 [__main__] INFO: Async results saved to async_job_application_burst_100users.json
+2026-04-05 10:36:57,678 [__main__] INFO: Starting async load test: 100 users, scenario: job_application_burst
+2026-04-05 10:36:59,647 [__main__] INFO: Async results saved to async_job_application_burst_100users.json
+2026-04-05 10:47:07,851 [__main__] INFO: Starting async load test: 100 users, scenario: job_application_burst
+2026-04-05 10:47:09,392 [__main__] INFO: Async results saved to async_job_application_burst_100users.json
+2026-04-05 10:48:13,438 [__main__] INFO: Starting async load test: 10 users, scenario: job_application_burst
+2026-04-05 10:48:14,529 [__main__] INFO: Async results saved to async_job_application_burst_10users.json
+2026-04-05 10:52:39,154 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 10:52:50,749 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 11:02:50,360 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 11:03:06,249 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 11:03:30,954 [__main__] INFO: Starting async load test: 100 users, scenario: job_application_burst
+2026-04-05 11:03:32,689 [__main__] INFO: Async results saved to async_job_application_burst_100users.json
+2026-04-05 11:26:43,054 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 11:26:54,999 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 11:33:41,657 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 11:33:53,920 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 11:34:35,273 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 11:34:48,546 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 11:49:31,794 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 11:49:45,860 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 12:18:06,341 [__main__] INFO: Starting async load test: 100 users, scenario: stress_test
+2026-04-05 12:18:11,057 [__main__] INFO: Async results saved to async_stress_test_100users.json
+2026-04-05 12:18:11,499 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 12:18:26,285 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 12:18:26,718 [__main__] INFO: Starting async load test: 500 users, scenario: stress_test
+2026-04-05 12:18:50,643 [__main__] INFO: Async results saved to async_stress_test_500users.json
+2026-04-05 12:18:51,103 [__main__] INFO: Starting async load test: 1000 users, scenario: stress_test
+2026-04-05 12:19:21,627 [__main__] INFO: Test timed out after 30.0s
+2026-04-05 12:19:21,773 [__main__] INFO: Async results saved to async_stress_test_1000users.json
+2026-04-05 12:22:30,295 [__main__] INFO: Starting async load test: 100 users, scenario: stress_test
+2026-04-05 12:22:34,881 [__main__] INFO: Async results saved to async_stress_test_100users.json
+2026-04-05 12:22:35,334 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 12:22:49,458 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 12:22:49,920 [__main__] INFO: Starting async load test: 500 users, scenario: stress_test
+2026-04-05 12:23:13,389 [__main__] INFO: Async results saved to async_stress_test_500users.json
+2026-04-05 12:23:13,882 [__main__] INFO: Starting async load test: 1000 users, scenario: stress_test
+2026-04-05 12:23:44,510 [__main__] INFO: Test timed out after 30.0s
+2026-04-05 12:23:44,652 [__main__] INFO: Async results saved to async_stress_test_1000users.json
+2026-04-05 12:26:37,932 [__main__] INFO: Starting async load test: 100 users, scenario: stress_test
+2026-04-05 12:26:42,362 [__main__] INFO: Async results saved to async_stress_test_100users.json
+2026-04-05 12:26:42,813 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 12:26:56,255 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 12:26:56,670 [__main__] INFO: Starting async load test: 500 users, scenario: stress_test
+2026-04-05 12:27:19,049 [__main__] INFO: Async results saved to async_stress_test_500users.json
+2026-04-05 12:27:19,483 [__main__] INFO: Starting async load test: 1000 users, scenario: stress_test
+2026-04-05 12:27:50,104 [__main__] INFO: Test timed out after 30.0s
+2026-04-05 12:27:50,227 [__main__] INFO: Async results saved to async_stress_test_1000users.json
+2026-04-05 12:31:13,978 [__main__] INFO: Starting async load test: 100 users, scenario: stress_test
+2026-04-05 12:31:18,571 [__main__] INFO: Async results saved to async_stress_test_100users.json
+2026-04-05 12:31:19,006 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 12:31:32,945 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 12:31:33,392 [__main__] INFO: Starting async load test: 500 users, scenario: stress_test
+2026-04-05 12:31:57,329 [__main__] INFO: Async results saved to async_stress_test_500users.json
+2026-04-05 12:31:57,833 [__main__] INFO: Starting async load test: 1000 users, scenario: stress_test
+2026-04-05 12:32:28,804 [__main__] INFO: Test timed out after 30.0s
+2026-04-05 12:32:28,946 [__main__] INFO: Async results saved to async_stress_test_1000users.json
+2026-04-05 12:34:36,454 [__main__] INFO: Starting async load test: 100 users, scenario: stress_test
+2026-04-05 12:34:41,380 [__main__] INFO: Async results saved to async_stress_test_100users.json
+2026-04-05 12:34:41,833 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 12:34:55,295 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 12:34:55,792 [__main__] INFO: Starting async load test: 500 users, scenario: stress_test
+2026-04-05 12:35:19,627 [__main__] INFO: Async results saved to async_stress_test_500users.json
+2026-04-05 12:35:20,072 [__main__] INFO: Starting async load test: 1000 users, scenario: stress_test
+2026-04-05 12:35:50,689 [__main__] INFO: Test timed out after 30.0s
+2026-04-05 12:35:50,850 [__main__] INFO: Async results saved to async_stress_test_1000users.json
+2026-04-05 12:37:12,836 [__main__] INFO: Starting async load test: 100 users, scenario: stress_test
+2026-04-05 12:37:17,684 [__main__] INFO: Async results saved to async_stress_test_100users.json
+2026-04-05 12:37:18,137 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 12:37:32,327 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 12:37:32,829 [__main__] INFO: Starting async load test: 500 users, scenario: stress_test
+2026-04-05 12:37:56,839 [__main__] INFO: Async results saved to async_stress_test_500users.json
+2026-04-05 12:37:57,357 [__main__] INFO: Starting async load test: 1000 users, scenario: stress_test
+2026-04-05 12:38:27,851 [__main__] INFO: Test timed out after 30.0s
+2026-04-05 12:38:28,026 [__main__] INFO: Async results saved to async_stress_test_1000users.json
+2026-04-05 13:11:47,261 [__main__] INFO: Starting async load test: 100 users, scenario: stress_test
+2026-04-05 13:11:53,363 [__main__] INFO: Async results saved to async_stress_test_100users.json
+2026-04-05 13:11:53,938 [__main__] INFO: Starting async load test: 300 users, scenario: stress_test
+2026-04-05 13:12:08,960 [__main__] INFO: Async results saved to async_stress_test_300users.json
+2026-04-05 13:12:09,530 [__main__] INFO: Starting async load test: 500 users, scenario: stress_test
+2026-04-05 13:12:35,186 [__main__] INFO: Async results saved to async_stress_test_500users.json
+2026-04-05 13:12:35,687 [__main__] INFO: Starting async load test: 1000 users, scenario: stress_test
+2026-04-05 13:13:06,432 [__main__] INFO: Test timed out after 30.0s
+2026-04-05 13:13:06,578 [__main__] INFO: Async results saved to async_stress_test_1000users.json

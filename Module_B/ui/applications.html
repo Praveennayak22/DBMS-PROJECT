@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applications | Module B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="applications">
+  <div class="backdrop"></div>
+  <header class="header">
+    <div>
+      <h1>Applications</h1>
+      <p>View current student applications and statuses.</p>
+    </div>
+    <div class="session-box">
+      <span id="sessionState">Not logged in</span>
+      <button id="logoutBtn" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="/">Home</a>
+    <a href="/ui/portfolio" data-portfolio-access="1">Portfolio</a>
+    <a href="/ui/members" data-members-access="1">Members</a>
+    <a href="/ui/groups" data-groups-view="1">Groups</a>
+    <a href="/ui/companies-jobs" data-companies-view="1">Companies and Jobs</a>
+    <a href="/ui/applications" class="active">Applications</a>
+    <a href="/ui/audit" data-audit-access="1">Audit Logs</a>
+  </nav>
+
+  <main class="page">
+    <section class="card" id="availableJobsCard">
+      <h2>Available Jobs</h2>
+      <p class="muted">Students can apply directly from this list.</p>
+      <div class="row">
+        <button id="refreshJobsBtn" class="ghost">Refresh Jobs</button>
+      </div>
+      <div id="jobsList" class="list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Applications List</h2>
+      <div class="row">
+        <button id="refreshApplicationsBtn" class="ghost">Refresh Applications</button>
+      </div>
+      <div id="applicationsList" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/static/common.js?v=20260323"></script>
+  <script src="/static/applications.js?v=20260323"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+2026-04-05 10:40:40,274 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 10:40:42,366 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 10:41:57,000 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 10:41:59,983 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 10:42:46,598 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 10:42:51,803 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 10:42:59,122 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 10:43:04,430 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 10:43:48,531 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 10:43:53,685 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 10:45:32,214 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 10:45:37,443 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 10:46:44,775 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 10:46:52,694 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 10:51:26,752 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 10:51:34,074 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 10:51:38,803 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 10:51:43,936 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 10:57:52,528 [MainThread] INFO: Starting concurrent test: 10 users, scenario: mixed_operations
+2026-04-05 10:58:00,310 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_10users.json
+2026-04-05 11:02:35,480 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:02:43,582 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:03:18,375 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 11:03:23,599 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 11:07:29,707 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 11:07:35,044 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 11:19:20,665 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:19:28,047 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:30:14,253 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:30:21,451 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:31:14,016 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:31:21,435 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:33:12,208 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:33:19,768 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:34:15,529 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:34:23,352 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:44:01,173 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:44:08,926 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:46:34,469 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:46:41,958 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 11:48:40,266 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 11:48:48,204 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 13:11:16,063 [MainThread] INFO: Starting concurrent test: 20 users, scenario: mixed_operations
+2026-04-05 13:11:23,438 [MainThread] INFO: Detailed results saved to concurrent_mixed_operations_20users.json
+2026-04-05 13:11:24,172 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 13:11:29,524 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json
+2026-04-05 13:11:33,638 [MainThread] INFO: Starting concurrent test: 20 users, scenario: job_application
+2026-04-05 13:11:39,233 [MainThread] INFO: Detailed results saved to concurrent_job_application_20users.json

@@ -1,0 +1,39 @@
+Module B Index Benchmark
+
+API timings (seconds):
+GET /jobs?min_cpi=8.0 after  index avg (s): skipped
+GET /jobs?min_cpi=8.0 before index avg (s): skipped
+GET /applications after  index avg (s): skipped
+GET /applications before index avg (s): skipped
+
+SQL timings (seconds):
+Q1 after  index avg (s): 0.002972
+Q1 before index avg (s): 0.004874
+Q2 after  index avg (s): 0.001437
+Q2 before index avg (s): 0.001143
+
+Q1 EXPLAIN after:
+(7, 0, 0, 'SCAN a')
+(11, 0, 0, 'SEARCH s USING INTEGER PRIMARY KEY (rowid=?)')
+(14, 0, 0, 'SEARCH u USING INTEGER PRIMARY KEY (rowid=?)')
+(17, 0, 0, 'SEARCH j USING INTEGER PRIMARY KEY (rowid=?)')
+(34, 0, 0, 'USE TEMP B-TREE FOR ORDER BY')
+
+Q1 EXPLAIN before:
+(8, 0, 0, 'SEARCH a USING INDEX idx_applications_status (status=?)')
+(15, 0, 0, 'SEARCH s USING INTEGER PRIMARY KEY (rowid=?)')
+(18, 0, 0, 'SEARCH u USING INTEGER PRIMARY KEY (rowid=?)')
+(21, 0, 0, 'SEARCH j USING INTEGER PRIMARY KEY (rowid=?)')
+(38, 0, 0, 'USE TEMP B-TREE FOR ORDER BY')
+
+Q2 EXPLAIN after:
+(5, 0, 0, 'SCAN e')
+(10, 0, 0, 'SEARCH j USING INTEGER PRIMARY KEY (rowid=?)')
+(13, 0, 0, 'SEARCH c USING INTEGER PRIMARY KEY (rowid=?)')
+(23, 0, 0, 'USE TEMP B-TREE FOR ORDER BY')
+
+Q2 EXPLAIN before:
+(6, 0, 0, 'SEARCH e USING INDEX idx_criteria_min_cpi (min_cpi<?)')
+(14, 0, 0, 'SEARCH j USING INTEGER PRIMARY KEY (rowid=?)')
+(17, 0, 0, 'SEARCH c USING INTEGER PRIMARY KEY (rowid=?)')
+(27, 0, 0, 'USE TEMP B-TREE FOR ORDER BY')

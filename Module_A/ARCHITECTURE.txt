@@ -1,0 +1,67 @@
+Transaction System Architecture
+==============================
+
++-----------------------------------------------------------------------------+
+|                          APPLICATION LAYER                                  |
++-----------------------------------------------------------------------------+
+|                     TransactionCoordinator                                  |
+|                    +---------------------+                                 |
+|                    |  Context Manager    |                                 |
+|                    |  Retry Logic       |                                 |
+|                    |  Error Handling    |                                 |
+|                    +---------------------+                                 |
++-----------------------------------------------------------------------------+
+|                        TRANSACTION ENGINE                                   |
+|  +-----------------+  +-----------------+  +-----------------+             |
+|  | TransactionMgr  |  |   LockManager   |  | RecoveryManager |             |
+|  |                 |  |                 |  |                 |             |
+|  | • Lifecycle     |  | • S/X Locks     |  | • Analysis      |             |
+|  | • State Track   |  | • Deadlock Det  |  | • Undo Phase    |             |
+|  | • Isolation     |  | • Timeout       |  | • Redo Phase    |             |
+|  +-----------------+  +-----------------+  +-----------------+             |
++-----------------------------------------------------------------------------+
+|                         STORAGE LAYER                                       |
+|  +-----------------+  +-----------------+  +-----------------+             |
+|  |TransactionalStg |  |   WALManager    |  |  DBManager      |             |
+|  |                 |  |                 |  |                 |             |
+|  | • Buffering     |  | • Log Entries   |  | • Multi-table   |             |
+|  | • Read-own-wrt  |  | • Persistence   |  | • Table Mgmt    |             |
+|  | • Before Image  |  | • Checkpoints   |  | • Schema        |             |
+|  +-----------------+  +-----------------+  +-----------------+             |
++-----------------------------------------------------------------------------+
+|                         DATA STRUCTURES                                     |
+|  +-----------------+  +-----------------+  +-----------------+             |
+|  |   B+ Trees      |  |   Hash Tables   |  |    Indexes      |             |
+|  |                 |  |                 |  |                 |             |
+|  | • Ordered Data  |  | • Fast Lookup   |  | • Key Access    |             |
+|  | • Range Query   |  | • Lock Tables   |  | • Efficient     |             |
+|  | • Leaf Linking  |  | • Txn Tracking  |  | • Persistent    |             |
+|  +-----------------+  +-----------------+  +-----------------+             |
++-----------------------------------------------------------------------------+
+
+Transaction Flow:
+================
+
+1. BEGIN -> TransactionManager creates transaction
+2. OPERATIONS -> Buffered in TransactionalStorage + Logged in WAL
+3. LOCKS -> Acquired via LockManager for isolation
+4. COMMIT -> WAL persistence + B+ Tree updates + Lock release
+5. ROLLBACK -> Discard buffers + Release locks
+6. RECOVERY -> WAL replay on startup (Analysis -> Undo -> Redo)
+
+ACID Properties Implementation:
+==============================
+
+Atomicity:    Buffered operations + WAL + Rollback capability
+Consistency:  Constraint validation + Referential integrity  
+Isolation:    Lock-based concurrency + READ_COMMITTED
+Durability:   Write-Ahead Logging + Force-write policy
+
+Performance Monitoring:
+======================
+
+PerformanceMonitor (separate component)
+• Real-time transaction metrics
+• CSV logging for historical analysis
+• JSON export for integration
+• Comprehensive reporting

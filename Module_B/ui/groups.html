@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groups | Module B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="groups">
+  <div class="backdrop"></div>
+  <header class="header">
+    <div>
+      <h1>Groups and Mapping</h1>
+      <p>Create groups and map or unmap members.</p>
+    </div>
+    <div class="session-box">
+      <span id="sessionState">Not logged in</span>
+      <button id="logoutBtn" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="/">Home</a>
+    <a href="/ui/portfolio" data-portfolio-access="1">Portfolio</a>
+    <a href="/ui/members" data-members-access="1">Members</a>
+    <a href="/ui/groups" class="active" data-groups-view="1">Groups</a>
+    <a href="/ui/companies-jobs" data-companies-view="1">Companies and Jobs</a>
+    <a href="/ui/applications">Applications</a>
+    <a href="/ui/audit" data-audit-access="1">Audit Logs</a>
+  </nav>
+
+  <main class="page">
+    <section class="card" id="groupAdminCreateCard">
+      <h2>Create Group</h2>
+      <div class="row" id="groupCreateControls">
+        <input id="groupName" placeholder="new group name" />
+        <button id="createGroupBtn">Create Group</button>
+        <button id="refreshGroupsBtn" class="ghost">Refresh Groups</button>
+      </div>
+    </section>
+
+    <section class="card" id="groupAdminMapCard">
+      <h2>Member Mapping</h2>
+      <div class="row" id="groupMapControls">
+        <input id="mapGroupId" type="number" placeholder="group id" />
+        <input id="mapMemberId" type="number" placeholder="member id" />
+        <button id="addGroupMemberBtn">Add Member</button>
+        <button id="removeGroupMemberBtn" class="ghost">Remove Member</button>
+      </div>
+      <div id="groupsList" class="list"></div>
+      <pre id="groupsOut" class="mono"></pre>
+    </section>
+  </main>
+
+  <script src="/static/common.js?v=20260323"></script>
+  <script src="/static/groups.js?v=20260323"></script>
+</body>
+</html>

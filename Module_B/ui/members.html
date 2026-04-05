@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members | Module B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="members">
+  <div class="backdrop"></div>
+  <header class="header">
+    <div>
+      <h1>Member Lifecycle</h1>
+      <p>Create and remove student member records.</p>
+    </div>
+    <div class="session-box">
+      <span id="sessionState">Not logged in</span>
+      <button id="logoutBtn" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="/">Home</a>
+    <a href="/ui/portfolio" data-portfolio-access="1">Portfolio</a>
+    <a href="/ui/members" class="active" data-members-access="1">Members</a>
+    <a href="/ui/groups" data-groups-view="1">Groups</a>
+    <a href="/ui/companies-jobs" data-companies-view="1">Companies and Jobs</a>
+    <a href="/ui/applications">Applications</a>
+    <a href="/ui/audit" data-audit-access="1">Audit Logs</a>
+  </nav>
+
+  <main class="page">
+    <section class="card" id="adminCreateMemberCard">
+      <h2>Create Member</h2>
+      <div class="row">
+        <input id="memberUsername" placeholder="username" />
+        <input id="memberEmail" placeholder="email" />
+        <input id="memberPassword" placeholder="password" value="student123" />
+        <input id="memberFullName" placeholder="full name" />
+      </div>
+      <div class="row">
+        <input id="memberCpi" type="number" step="0.1" placeholder="latest cpi" />
+        <input id="memberProgram" placeholder="program" />
+        <input id="memberDiscipline" placeholder="discipline" />
+        <input id="memberGradYear" type="number" placeholder="graduating year" />
+      </div>
+      <div class="row">
+        <input id="memberBacklogs" type="number" placeholder="active backlogs" value="0" />
+        <input id="memberBio" placeholder="bio" />
+        <input id="memberSkills" placeholder="skills" />
+        <select id="memberVisibility">
+          <option value="private">private</option>
+          <option value="group">group</option>
+          <option value="public">public</option>
+        </select>
+      </div>
+      <div class="row">
+        <input id="memberGroups" placeholder="group ids (comma separated)" />
+        <button id="createMemberBtn">Create Member</button>
+      </div>
+    </section>
+
+    <section class="card" id="adminDeleteMemberCard">
+      <h2>Delete Member</h2>
+      <div class="row">
+        <input id="deleteMemberId" type="number" placeholder="member id to delete" />
+        <button id="deleteMemberBtn">Delete Member</button>
+      </div>
+      <pre id="memberOut" class="mono"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Candidate Directory</h2>
+      <div class="row">
+        <button id="refreshMembersBtn" class="ghost">Refresh Candidates</button>
+      </div>
+      <div id="membersList" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/static/common.js?v=20260323"></script>
+  <script src="/static/members.js?v=20260323"></script>
+</body>
+</html>

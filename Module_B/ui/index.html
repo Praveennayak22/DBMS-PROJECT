@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module B Operations Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="index">
+  <div class="backdrop"></div>
+  <header class="header">
+    <div>
+      <h1>Module B Operations Console</h1>
+      <p>Independent pages for auth, portfolio, members, groups, companies, jobs, applications, and audit logs.</p>
+    </div>
+    <div class="session-box">
+      <span id="sessionState">Not logged in</span>
+      <button id="logoutBtn" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="card">
+      <h2>Authentication and Session</h2>
+      <div class="row">
+        <input id="username" placeholder="username" value="admin" />
+        <input id="password" type="password" placeholder="password" value="admin123" />
+        <button id="loginBtn">Sign In</button>
+        <button id="checkAuthBtn" class="ghost">Check isAuth</button>
+      </div>
+      <pre id="authInfo" class="mono"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Feature Pages</h2>
+      <div class="tiles">
+        <a class="tile" href="/ui/portfolio" data-portfolio-access="1">
+          <h3>Portfolio</h3>
+          <p>Load and update profile data.</p>
+        </a>
+        <a class="tile" href="/ui/members" data-members-access="1">
+          <h3>Members</h3>
+          <p>Create and remove members.</p>
+        </a>
+        <a class="tile" href="/ui/groups" data-groups-view="1">
+          <h3>Groups</h3>
+          <p>Manage groups and mappings.</p>
+        </a>
+        <a class="tile" href="/ui/companies-jobs" data-companies-view="1">
+          <h3>Companies and Jobs</h3>
+          <p>Run full CRUD operations.</p>
+        </a>
+        <a class="tile" href="/ui/applications">
+          <h3>Applications</h3>
+          <p>View applicant status list.</p>
+        </a>
+        <a class="tile" href="/ui/audit" data-audit-access="1">
+          <h3>Audit Logs</h3>
+          <p>Inspect write operation logs.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/common.js?v=20260323"></script>
+  <script src="/static/index.js?v=20260323"></script>
+</body>
+</html>

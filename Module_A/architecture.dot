@@ -1,0 +1,70 @@
+digraph TransactionArchitecture {
+    rankdir=TB;
+    node [shape=box, style=rounded];
+    
+    // Application Layer
+    subgraph cluster_app {
+        label="Application Layer";
+        style=filled;
+        color=lightblue;
+        
+        App [label="User Application"];
+        Coord [label="TransactionCoordinator\n• Context Manager\n• Retry Logic\n• Error Handling"];
+    }
+    
+    // Transaction Engine
+    subgraph cluster_engine {
+        label="Transaction Engine";
+        style=filled;
+        color=lightgreen;
+        
+        TxnMgr [label="TransactionManager\n• Lifecycle\n• State Tracking\n• Isolation"];
+        LockMgr [label="LockManager\n• S/X Locks\n• Deadlock Detection\n• Timeout"];
+        Recovery [label="RecoveryManager\n• Analysis Phase\n• Undo Phase\n• Redo Phase"];
+    }
+    
+    // Storage Layer  
+    subgraph cluster_storage {
+        label="Storage Layer";
+        style=filled;
+        color=lightyellow;
+        
+        TxnStorage [label="TransactionalStorage\n• Buffering\n• Read-own-writes\n• Before Images"];
+        WAL [label="WALManager\n• Log Entries\n• Persistence\n• Checkpoints"];
+        DBMgr [label="DBManager\n• Multi-table\n• Schema\n• Table Management"];
+    }
+    
+    // Data Structures
+    subgraph cluster_data {
+        label="Data Structures";
+        style=filled;
+        color=lightcoral;
+        
+        BPTree [label="B+ Trees\n• Ordered Storage\n• Range Queries\n• Leaf Linking"];
+        HashTbl [label="Hash Tables\n• Fast Lookup\n• Lock Tables\n• Transaction Tracking"];
+    }
+    
+    // Connections
+    App -> Coord;
+    Coord -> TxnMgr;
+    Coord -> LockMgr;
+    Coord -> TxnStorage;
+    
+    TxnMgr -> WAL;
+    TxnMgr -> Recovery;
+    
+    LockMgr -> HashTbl;
+    
+    Recovery -> WAL;
+    Recovery -> BPTree;
+    
+    TxnStorage -> BPTree;
+    WAL -> BPTree;
+    
+    DBMgr -> BPTree;
+    DBMgr -> HashTbl;
+    
+    // Performance Monitoring (side component)
+    Monitor [label="PerformanceMonitor\n• Real-time Metrics\n• CSV Logging\n• Reports", shape=ellipse, color=orange];
+    Coord -> Monitor [style=dashed, label="monitors"];
+}
